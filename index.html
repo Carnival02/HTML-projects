@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task4</title>
+</head>
+<body>
+    <h1>Choose the game You wanted to play</h1>
+    <!-- <button type="radio">Cricket</button>
+    <button type="radio">Football</button>
+    <button type="radio">Hockey</button> -->
+    <input type="radio"  name="option"  id="Cricket" value="Cricket">
+    <label for="Cricket">Cricket</label>
+    <input type="radio" name="option"  id="Hockey" value="Hockey">
+    <label for="Hockey">Hockey</label>
+    <input type="radio"  name="option"  id="Football" value="Football">
+    <label for="Football">Football</label>
+
+    <h1 id="results"></h1>
+
+<script>
+    const radios=document.querySelectorAll('input[name="option"]');
+    const result=document.getElementById('results')
+
+
+    radios.forEach(radio=>{
+        radio.addEventListener('change',()=>{
+            if(radio.checked){
+                result.textContent=`You choose ${radio.value} to play`
+            }
+        })
+    })
+
+
+</script>
+
+
+</body>
+
+
+
+</html>
